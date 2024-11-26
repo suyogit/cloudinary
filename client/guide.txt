@@ -1,0 +1,1 @@
+install axios react-router-dom  react-loader-spinner
