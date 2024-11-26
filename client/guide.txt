@@ -1,1 +1,8 @@
 install axios react-router-dom  react-loader-spinner
+
+for authenticated approach we need signature  that needs to be generated in backend
+
+for unatuhetication approach, allow to upload without the need to generate an auheniticataion signature on our backend, we need add upload preset
+
+VITE_CLOUDINARY_CLOUD_NAME=your-cloud-name
+add in this format for environmental variable
