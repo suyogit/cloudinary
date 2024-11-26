@@ -44,7 +44,7 @@ const Unauthenticated = () => {
       const videoUrl = await uploadFile("video");
 
       // Send backend api request
-      //await axios.post(`${process.env.REACT_APP_BACKEND_BASEURL}/api/videos`, { imgUrl, videoUrl });
+      await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/api/videos`, { imgUrl, videoUrl });
 
       // Reset states
       setImg(null);
