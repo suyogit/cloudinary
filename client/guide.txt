@@ -3,6 +3,34 @@ install axios react-router-dom  react-loader-spinner
 for authenticated approach we need signature  that needs to be generated in backend
 
 for unatuhetication approach, allow to upload without the need to generate an auheniticataion signature on our backend, we need add upload preset
+create preset by clicking upload presets in cloudinary
+videos_preset , images_preset
+and change the signing mode to unsigned and in assed folder , write the name of folder u want to be created after uploading img or vdo
+
+
+and write same name in code
+   "upload_preset",
+      type === "image" ? "images_preset" : "videos_preset"
+    );
+
+
+
 
 VITE_CLOUDINARY_CLOUD_NAME=your-cloud-name
 add in this format for environmental variable
+
+--------------------------------
+
+
+now on implementing authentication method we need to generate signature in backend
+signature, timestamp, api_key and file is required
+signature and timestamp we will get from backend
+
+so we ve 2 task in backend
+-generating signature
+-uploading img and vdo url to mongodb of those image and videos uploaded in cloudinanry
+
+
+  "type": "module",
+we are doing it to write ejs
+insta lling cloudinary cors detenv express mongoose nodemon
