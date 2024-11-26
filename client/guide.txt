@@ -34,3 +34,20 @@ so we ve 2 task in backend
   "type": "module",
 we are doing it to write ejs
 insta lling cloudinary cors detenv express mongoose nodemon
+
+
+
+add below things in .env of client
+VITE_APP_CLOUDINARY_CLOUD_NAME=
+VITE_APP_BACKEND_BASEURL=http://localhost:5000 
+VITE_APP_CLOUDINARY_API_KEY=
+
+
+
+
+add below things in .env of server
+PORT=5000
+MONGO_URI=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=

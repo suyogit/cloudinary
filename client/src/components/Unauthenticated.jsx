@@ -19,12 +19,12 @@ const Unauthenticated = () => {
     );
 
     try {
-        const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+        const cloudName = import.meta.env.VITE_APP_CLOUDINARY_CLOUD_NAME;
         let resourceType = type === "image" ? "image" : "video";
       let api = `https://api.cloudinary.com/v1_1/${cloudName}/${resourceType}/upload`;
 
       const res = await axios.post(api, data);
-      const { secure_url } = res.data;
+      const { secure_url } = res.data;//https link
       console.log(secure_url);
       return secure_url;
     } catch (error) {
@@ -44,7 +44,7 @@ const Unauthenticated = () => {
       const videoUrl = await uploadFile("video");
 
       // Send backend api request
-      await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/api/videos`, { imgUrl, videoUrl });
+      await axios.post(`${import.meta.env.VITE_APP_BACKEND_BASEURL}/api/videos`, { imgUrl, videoUrl });
 
       // Reset states
       setImg(null);
